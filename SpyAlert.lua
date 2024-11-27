@@ -10,7 +10,7 @@ local function get_class_entity()
     local players = entities.FindByClass("CTFPlayer")
     local temp_ents = {}
 
-    for _, v in ipairs(players) do
+    for _, v in pairs(players) do
         if not v:IsDormant()
             and v:GetPropInt("m_iClass") == 8
             and v:GetPropInt("m_iTeamNum") ~= local_team_num
