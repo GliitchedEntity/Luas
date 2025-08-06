@@ -15,6 +15,7 @@ callbacks.Register("CreateMove", function(cmd)
     local buttons = cmd:GetButtons()
     local flags = plr:GetPropInt("m_fFlags")
     if (buttons & movementKeys) == 0 or
+        (buttons & IN_ATTACK) ~= 0 or
         (flags & FL_ONGROUND) == 0 or
         (not duckSpeed and (flags & FL_DUCKING) == 2) or
         plr:EstimateAbsVelocity():Length2D() >= (plr:GetPropFloat("m_flMaxspeed")*speedmul) or
