@@ -1,6 +1,6 @@
 --Settings
 local cachesuspects = true --Save suspects to file
-local keywords = {"%[stac%]", "smac ", "cheat", "hack"} --Keywords to look for in ban reasons
+local keywords = {"%[stac%]", "smac ", "cheat", "hack", "aimbot"} --Keywords to look for in ban reasons
 local apikey = "CLVZ*****************************" --Your steamhistory API key
 local host = "https://steamhistory.net/api/sourcebans?key=" .. apikey .. "&shouldkey=0&steamids="
 
@@ -109,3 +109,4 @@ if cachesuspects then cacheSuspects(false) end
 updatePlayers()
 scanPlayers()
 cacheSuspects(true)
+
